@@ -1,9 +1,9 @@
-const newFormHandler = async function(event) {
+const newFormHandler = async (event) => {
     event.preventDefault();
-    const title = document.querySelector('input[name="post-title"]').value;
-    const body = document.querySelector('textarea[name="post-body"]').value;
+    const title = document.querySelector('input[name="review-title"]').value;
+    const body = document.querySelector('textarea[name="review-body"]').value;
     const token = localStorage.getItem("token");
-    await fetch(`/api/post`, {
+    await fetch(`/api/review`, {
         method: 'POST',
         body: JSON.stringify({
             title,
@@ -18,5 +18,5 @@ const newFormHandler = async function(event) {
 };
 
 document    
-    .querySelector("#new-post-form")
+    .querySelector("#new-review-form")
     .addEventListener("submit", newFormHandler);

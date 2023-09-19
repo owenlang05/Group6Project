@@ -1,9 +1,9 @@
-const signupFormHandler = async function(event) {
+const signupFormHandler = async (event) => {
     event.preventDefault();
     const usernameEl = document.querySelector("#username-input-signup");
     const passwordEl = document.querySelector("#password-input-signup");
     fetch("api/user", {
-        method: 'post',
+        method: 'POST',
         body: JSON.stringify({
             username: usernameEl.value,
             password: passwordEl.value
