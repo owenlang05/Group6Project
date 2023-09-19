@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>AP Tech Blog</title>
+</head>
+
+<body class="flex-column min-100-vh">
+    <nav class="navbar">
+        <ul>
+            <li class="li-inline nav-item"><a href="/">Home</a></li>
+            <li class="li-inline nav-item"><a href="/dashboard">Dashboard</a></li>
+            <li class="li-inline nav-item"><a href="/login">Login</a></li>
+            {{!-- <li class="li-inline nav-item"><a href="#" id="logout-link">Logout</a></li> --}}
+        </ul>
+    </nav>
+    <header class="hero">
+        <h1 class="app-title"><a href="/">AP Tech Blog</a></h1> 
+    </header>
+    <main class="col-auto">
+        {{{body}}}
+    </main>
+    <footer class="flex-row justify-center">
+        AP Tech Blog
+    </footer>
+
+{{!-- <script src="/javascript/login.js"></script> --}}
+</body>
+</html>
