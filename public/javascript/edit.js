@@ -1,9 +1,9 @@
 const editFormHandler = async (event) => {
     event.preventDefault();
-    const postId = document.querySelector('input[name="post-id"]').value;
-    const title = document.querySelector('input[name="post-title"]').value;
-    const body = document.querySelector('textarea[name="post-body"]').value;
-    await fetch(`/api/post/${postId}`, {
+    const postId = document.querySelector('input[name="review-id"]').value;
+    const title = document.querySelector('input[name="review-title"]').value;
+    const body = document.querySelector('textarea[name="review-body"]').value;
+    await fetch(`/api/review/${reviewId}`, {
         method: 'PUT',
         body: JSON.stringify({
             title,

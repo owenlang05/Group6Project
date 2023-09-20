@@ -1,7 +1,7 @@
-const deletePostHandler = async (event) => {
+const deleteReviewHandler = async (event) => {
     event.preventDefault();
-    const postId = document.querySelector('input[name="post-id"]').value;
-    await fetch(`/api/post/${postId}`, {
+    const postId = document.querySelector('input[name="review-id"]').value;
+    await fetch(`/api/review/${reviewId}`, {
         method: 'DELETE'
     })
     .then(function() {
@@ -10,4 +10,4 @@ const deletePostHandler = async (event) => {
     .catch(err => console.log(err))
 }
 
-document.querySelector('#delete-btn').addEventListener('click', deletePostHandler);
+document.querySelector('#delete-btn').addEventListener('click', deleteReviewHandler);
