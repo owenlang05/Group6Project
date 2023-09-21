@@ -5,7 +5,7 @@ require('dotenv').config();
 router.get('/:query', async (req, res) => {
     const query = req.params.query;
 
-    const url = `https://tripadvisor16.p.rapidapi.com/api/v1/restaurant/searchLocation?query=${query}`;
+    const url = `https://tripadvisor16.p.rapidapi.com/api/v1/restaurant/searchLocation?query=mumbai`;
     const options = {
         method: 'GET',
         headers: {
@@ -16,11 +16,14 @@ router.get('/:query', async (req, res) => {
 
     try {
         const response = await fetch(url, options);
-        const result = await response.text();
+        const result = await JSON.parse(response);
+        
+        res.status(200).json(JSON.stringify(result))
         console.log(result);
     } catch (error) {
         console.error(error);
     }
+    
 }) 
 
 module.exports = router;
