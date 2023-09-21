@@ -1,10 +1,8 @@
 const User = require('./User');
 const Review = require('./Review');
-const Review = require('./Review');
 const Comment = require('./Comment');
 const Restaurant = require('./Restaurant');
 
-Review.belongsTo(User, {
 Review.belongsTo(User, {
     foreignKey: 'userId',
     onDelete: 'CASCADE'
