@@ -1,17 +1,17 @@
-<div class="post">
+<div class="post" data-id="{{review.id}}">
     <article class="card">
         <div class="card-header flex-row justify-space-between">
             <h2>{{review.title}}</h2>
         </div> 
         <div>
-            Written by {{review.User.username}} on {{format_date createdAt}}
+            Written by {{review.User.username}} on {{format_date review.createdAt}}
         </div>
         <div>
             {{review.body}}
         </div>
     </article>
 
-    {{#if post.Comments}}
+    {{#if review.Comments}}
     <section class="card">
         <div class="card-header">
             <h3>Comments</h3>

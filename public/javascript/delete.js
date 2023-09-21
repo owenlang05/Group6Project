@@ -1,6 +1,6 @@
 const deleteReviewHandler = async (event) => {
     event.preventDefault();
-    const postId = document.querySelector('input[name="review-id"]').value;
+    const reviewId = document.querySelector('input[name="review-id"]').value;
     await fetch(`/api/review/${reviewId}`, {
         method: 'DELETE'
     })
