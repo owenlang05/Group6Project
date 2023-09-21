@@ -1,21 +1,20 @@
 const router = require('express').Router();
-const { Post, User } = require('../models');
+const { Review, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 // GET route for retrieving all posts
 router.get('/', withAuth, (req, res) => {
-    Post.findAll({
+    Review.findAll({
         where: {
             userId: req.session.userId
         },
         include: User
     })
-    .then(dbPostData => {
-        const posts = dbPostData.map((post) => post.get({ plain: true }));
-        console.log(posts)
+    .then(dbReviewData => {
+        const reviews = dbReviewData.map((review) => review.get({ plain: true }));
         res.render('all-posts-admin', {
             layout: 'dashboard',
-            posts
+            reviews
         });
     })
     .catch(err => {
@@ -33,13 +32,13 @@ router.get('/new', withAuth, (req, res) => {
 
 // GET route for editing a post when user is logged in
 router.get('/edit/:id', withAuth, (req, res) => {
-    Post.findByPk(req.params.id)
-    .then(dbPostData => {
-        if (dbPostData) {
-            const post = dbPostData.get({ plain: true });
+    Review.findByPk(req.params.id)
+    .then(dbReviewData => {
+        if (dbReviewData) {
+            const review = dbReviewData.get({ plain: true });
             res.render('edit-post', {
                 layout: 'dashboard',
-                post
+                review
             });
         } else {
         res.status(404).end();
