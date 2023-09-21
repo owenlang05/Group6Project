@@ -1,22 +1,22 @@
 const router = require('express').Router();
-const { Post, Comment, User } = require('../models');
+const { Review, Comment, User } = require('../models');
 
 // GET route for retrieving all posts
 router.get('/', (req, res) => {
-    Post.findAll({
+    Review.findAll({
         include: [User],
     })
-    .then((dbPostData) => {
-        const posts = dbPostData.map((post) => post.get({ plain: true }));
-        res.render('all-posts', { posts });
+    .then((dbReviewData) => {
+        const reviews = dbReviewData.map((review) => review.get({ plain: true }));
+        res.render('all-posts', { reviews });
     })
     .catch((err) => {
         res.json(500).json(err);
     });
 });
 
-router.get('/post/:id', (req, res) => {
-    Post.findByPk(req.params.id, {
+router.get('/review/:id', (req, res) => {
+    Review.findByPk(req.params.id, {
         include: [
             User,
             {
@@ -25,10 +25,11 @@ router.get('/post/:id', (req, res) => {
             },
         ],
     })
-    .then((dbPostData) => {
-        if (dbPostData) {
-            const post = dbPostData.get({ plain: true });
-            res.render('single-posts', { post });
+    .then((dbReviewData) => {
+        if (dbReviewData) {
+            const review = dbReviewData.get({ plain: true });
+            console.log(review);
+            res.render('single-posts', { review });
         } else {
             res.status(404).end();
         }

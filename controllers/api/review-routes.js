@@ -1,13 +1,13 @@
 const router = require('express').Router();
-const { Post, Comment, User } = require('../../models');
+const { Review, Comment, User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, (req, res) => {
     const body = req.body;
     console.log(req.session.userId);
-    Post.create({ ...body, userId: req.session.userId })
-    .then(newPost => {
-        res.json(newPost);
+    Review.create({ ...body, userId: req.session.userId })
+    .then(newReview => {
+        res.json(newReview);
     })
     .catch(err => {
         res.status(500).json(err);
@@ -16,7 +16,7 @@ router.post('/', withAuth, (req, res) => {
 
 router.put('/:id', withAuth, (req, res) => {
     console.log(req.body, req.params.id)
-    Post.update(req.body, {
+    Review.update(req.body, {
         where: {
             id: req.params.id
         }
@@ -35,7 +35,7 @@ router.put('/:id', withAuth, (req, res) => {
 
 router.delete('/:id', withAuth, (req, res) => {
     console.log(req.body, req.params.id)
-    Post.destroy({
+    Review.destroy({
         where: {
             id: req.params.id
         }
