@@ -5,7 +5,7 @@ require('dotenv').config();
 router.get('/:query', async (req, res) => {
     const query = req.params.query;
 
-    const url = `https://tripadvisor16.p.rapidapi.com/api/v1/restaurant/searchLocation?query=mumbai`;
+    var url = `https://tripadvisor16.p.rapidapi.com/api/v1/restaurant/searchLocation?query=${query}`;
     const options = {
         method: 'GET',
         headers: {
@@ -15,13 +15,28 @@ router.get('/:query', async (req, res) => {
     };
 
     try {
-        const response = await fetch(url, options);
-        const result = await JSON.parse(response);
-        
-        res.status(200).json(JSON.stringify(result))
-        console.log(result);
+        let response = await fetch(url, options);
+        let result = await response.json();
+        const locationId = result.data[0].locationId;
+
+        console.log(result, locationId);
+
+        url = `https://tripadvisor16.p.rapidapi.com/api/v1/restaurant/searchRestaurants?locationId=${locationId}`;
+        try {
+            response = await fetch(url, options);
+            result = await response.json();
+    
+            console.log(result);
+            res.status(200).json(result)
+        }
+        catch (error) {
+            console.error(error);
+            res.status(500).json(error)
+        }        
+
     } catch (error) {
         console.error(error);
+        res.status(500).json(error)
     }
     
 }) 
