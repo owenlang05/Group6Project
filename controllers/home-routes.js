@@ -18,10 +18,11 @@ router.get('/', (req, res) => {
 router.get('/review/:id', (req, res) => {
     Review.findByPk(req.params.id, {
         include: [
-            User,
+            {
+                model: User,
+            },
             {
                 model: Comment,
-                include: [User],
             },
         ],
     })

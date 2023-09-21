@@ -10,7 +10,9 @@ Review.init(
         body: DataTypes.STRING
     },
     {
-        sequelize
+        sequelize,
+        modelName: 'Review',
+        freezeTableName: true
     }
 );
 
