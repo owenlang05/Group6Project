@@ -27,12 +27,20 @@ router.get('/:query', async (req, res) => {
             result = await response.json();
     
             console.log(result);
-            res.status(200).json(result)
+
+            const restaurants = result.data.data.map((data) => {return(data)});
+            // for (restaurant of restaurants) {
+            //     console.log(restaurant.name)
+            // }
+            // console.log(restaurants)
+            // res.status(200).json(result)
+
+            res.render('restaurants', {restaurants})
         }
         catch (error) {
             console.error(error);
             res.status(500).json(error)
-        }        
+        }
 
     } catch (error) {
         console.error(error);

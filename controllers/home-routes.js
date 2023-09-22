@@ -8,6 +8,7 @@ router.get('/', (req, res) => {
     })
     .then((dbReviewData) => {
         const reviews = dbReviewData.map((review) => review.get({ plain: true }));
+        console.log(reviews)
         res.render('all-posts', { reviews });
     })
     .catch((err) => {

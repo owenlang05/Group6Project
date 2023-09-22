@@ -1,5 +1,5 @@
 
 
 const getRestaurant = async (query) => {
-
+    
 }
