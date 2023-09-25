@@ -104,7 +104,7 @@ input {
 }
 
 .btn:hover {
-    color: var(--primary);
+    color: var(--dark);
     background-color: var(--secondary);
     transform: translate(0, 0);
     box-shadow: 2px 2px var(--darker);
@@ -129,7 +129,7 @@ input {
 
 .hero {
     padding: 3% 4%;
-    background-image: url(../../images/Dining-in-the-Sunshine-Coast-1080x423.jpeg);
+    background-image: url("../../images/Dining-in-the-Sunshine-Coast-1080x423.jpeg");
     background-color: var(--dark);
     color: var(--primary);
 }
