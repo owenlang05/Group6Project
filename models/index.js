@@ -5,7 +5,6 @@ const Restaurant = require('./Restaurant');
 
 Review.belongsTo(User, {
     foreignKey: 'userId',
-    onDelete: 'CASCADE'
 });
 
 Review.hasMany(Comment, {
@@ -14,6 +13,10 @@ Review.hasMany(Comment, {
 });
 
 Comment.belongsTo(User, {
+    foreignKey: 'userId',
+});
+
+User.hasMany(Comment, {
     foreignKey: 'userId',
     onDelete: 'CASCADE'
 });
@@ -27,6 +30,11 @@ Restaurant.hasMany(Review, {
     foreignKey: 'reviewId',
     onDelete: 'CASCADE'
 })
+
+User.hasMany(Review, {
+    foreignKey: 'userId',
+    onDelete: 'CASCADE'
+} )
 
 module.exports = {
     User,

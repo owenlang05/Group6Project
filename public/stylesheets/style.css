@@ -1,8 +1,8 @@
 :root {
-    --primary: #d9eaed;
-    --secondary: #a5C7cd;
-    --dark: #1d7A8A;
-    --darker: #0b343b;
+    --primary: #ffffff;
+    --secondary: #ffffff;
+    --dark: #ff3333;
+    --darker: #cc2626;
     --border-radius: .08rem;
 }
 
@@ -44,7 +44,7 @@ h2 a {
 }
 
 header {
-    margin-top: 5rem;
+    margin-top: 2rem;
 }
 
 main {
@@ -104,7 +104,7 @@ input {
 }
 
 .btn:hover {
-    color: var(--primary);
+    color: var(--dark);
     background-color: var(--secondary);
     transform: translate(0, 0);
     box-shadow: 2px 2px var(--darker);
@@ -127,12 +127,9 @@ input {
     margin: 0 40px;
 }
 
-.nav-item {
-    color: var(--darker);
-}
-
 .hero {
     padding: 3% 4%;
+    background-image: url("../../images/Dining-in-the-Sunshine-Coast-1080x423.jpeg");
     background-color: var(--dark);
     color: var(--primary);
 }
@@ -140,7 +137,7 @@ input {
 .app-title {
     font-size: 3rem;
     background-color: var(--primary);
-    color: var(--dark);
+    color: var(--darker);
     padding: 10px 10px;
     display: inline-block;
     border-radius: var(--border-radius);
@@ -193,6 +190,7 @@ input {
 
 .card-body {
     padding: 1%;
+    color: #000000;
 }
 
 .form-label,
