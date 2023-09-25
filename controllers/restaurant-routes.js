@@ -32,7 +32,7 @@ router.get('/:query', async (req, res) => {
             // for (restaurant of restaurants) {
             //     console.log(restaurant.name)
             // }
-            // console.log(restaurants)
+            console.log(restaurants)
             // res.status(200).json(result)
 
             res.render('restaurants', {restaurants})
