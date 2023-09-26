@@ -270,8 +270,22 @@ input {
     align-items: center;
 }
 
+.searchbar {
+    margin-top: 2rem;
+    margin: 0 auto;
+    width: 50vw;
+    display: block;
+}
+
+.searchbar .btn {
+    flex-grow: 1 0 0;
+    padding: 0, 0;
+}
+
 .col-auto {
     flex-grow: 1;
+    align-items: center;
+    justify-content: center;
 }
 
 .col-1 {
