@@ -131,7 +131,7 @@ input {
     padding: 3% 4%;
     background-image: url("/images/HeroImage.jpeg");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: right;
     background-color: var(--dark);
     color: var(--primary);
 }
@@ -519,6 +519,12 @@ input {
 
     .col-xl-12 {
         flex: 0 0 100%;
+    }
+}
+
+@media screen and (max-width: 965px) {
+    #subhead {
+        display: none;
     }
 }
 
