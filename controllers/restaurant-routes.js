@@ -29,11 +29,6 @@ router.get('/:query', async (req, res) => {
             console.log(result);
 
             const restaurants = result.data.data.map((data) => {return(data)});
-            // for (restaurant of restaurants) {
-            //     console.log(restaurant.name)
-            // }
-            console.log(restaurants)
-            // res.status(200).json(result)
 
             res.render('restaurants', {restaurants})
         }

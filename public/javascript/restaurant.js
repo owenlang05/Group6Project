@@ -1,5 +1,0 @@
-
-
-const getRestaurant = async (query) => {
-    
-}
