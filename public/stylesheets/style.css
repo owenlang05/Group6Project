@@ -129,7 +129,9 @@ input {
 
 .hero {
     padding: 3% 4%;
-    background-image: url("../../images/Dining-in-the-Sunshine-Coast-1080x423.jpeg");
+    background-image: url("/images/HeroImage.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
     background-color: var(--dark);
     color: var(--primary);
 }
