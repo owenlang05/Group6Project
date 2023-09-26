@@ -48,7 +48,14 @@ header {
 }
 
 main {
+    display: flex;
+    flex-flow: wrap;
     margin: 20px auto;
+    text-align: center;
+}
+
+#rescard {
+    margin: 20px;
 }
 
 a {
@@ -178,7 +185,7 @@ input {
 }
 
 .card {
-    margin: 0 0 20px 0;
+    margin: 20px 20px 20px 30px;
     border: 3px solid var(--darker);
     border-radius: var(--border-radius);
 }
