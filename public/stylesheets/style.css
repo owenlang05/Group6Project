@@ -48,7 +48,14 @@ header {
 }
 
 main {
+    display: flex;
+    flex-flow: wrap;
     margin: 20px auto;
+    text-align: center;
+}
+
+#rescard {
+    margin: 20px;
 }
 
 a {
@@ -131,7 +138,7 @@ input {
     padding: 3% 4%;
     background-image: url("/images/HeroImage.jpeg");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: right;
     background-color: var(--dark);
     color: var(--primary);
 }
@@ -178,7 +185,7 @@ input {
 }
 
 .card {
-    margin: 0 0 20px 0;
+    margin: 20px 20px 20px 30px;
     border: 3px solid var(--darker);
     border-radius: var(--border-radius);
 }
@@ -270,8 +277,22 @@ input {
     align-items: center;
 }
 
+.searchbar {
+    margin-top: 2rem;
+    margin: 0 auto;
+    width: 50vw;
+    display: block;
+}
+
+.searchbar .btn {
+    flex-grow: 1 0 0;
+    padding: 0, 0;
+}
+
 .col-auto {
     flex-grow: 1;
+    align-items: center;
+    justify-content: center;
 }
 
 .col-1 {
@@ -519,6 +540,12 @@ input {
 
     .col-xl-12 {
         flex: 0 0 100%;
+    }
+}
+
+@media screen and (max-width: 965px) {
+    #subhead {
+        display: none;
     }
 }
 

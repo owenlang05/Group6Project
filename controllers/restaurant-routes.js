@@ -19,21 +19,12 @@ router.get('/:query', async (req, res) => {
         let result = await response.json();
         const locationId = result.data[0].locationId;
 
-        console.log(result, locationId);
-
         url = `https://tripadvisor16.p.rapidapi.com/api/v1/restaurant/searchRestaurants?locationId=${locationId}`;
         try {
             response = await fetch(url, options);
             result = await response.json();
-    
-            console.log(result);
 
             const restaurants = result.data.data.map((data) => {return(data)});
-            // for (restaurant of restaurants) {
-            //     console.log(restaurant.name)
-            // }
-            console.log(restaurants)
-            // res.status(200).json(result)
 
             res.render('restaurants', {restaurants})
         }
