@@ -1,20 +1,29 @@
 <div class="card">
-    <div class="card-header">
-        <h2>Sign Up</h2>
+  <div class="card-header">
+    <h2>Sign Up</h2>
+  </div>
+
+  <form id="signup-form" class="card-body">
+    <div class="mb-3">
+      <label class="form-label" for="username-input-signup">Username</label>
+      <input class="form-control" type="text" id="username-input-signup" />
     </div>
-    <div id="signup" role="tabpanel">
-        <form id="signup-form" class="card-body">
-            <div>
-                <label for="username-input-signup">Username</label>
-                <input type="text" id="username-input-signup" />
-            </div>
-                <label for="password-input-signup">Password</label>
-                <input type="password" id="password-input-signup" />
-            <div></div>
-            <button type="submit" id="signup-btn" class="btn">Submit</button>
-            <a href="/login">Login Instead</a>
-        </form>
+    <div class="mb-3">
+
+      <label class="form-label" for="password-input-signup">Password</label>
+      <input class="form-control" type="password" id="password-input-signup" />
+
     </div>
+    <button
+      type="submit"
+      id="signup-btn"
+      class="btn btn-primary"
+    >Submit</button>
+  </form>
+  <div class="card-footer text-body-secondary">
+    <a href="/login">Login Instead</a>
+  </div>
+
 </div>
 
 <script src="/javascript/signup.js"></script>

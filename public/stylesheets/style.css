@@ -1,25 +1,68 @@
 :root {
-    --primary: #ffffff;
-    --secondary: #ffffff;
-    --dark: #ff3333;
-    --darker: #cc2626;
-    --border-radius: .08rem;
+  --primary: #ffffff;
+  --secondary: #ffffff;
+  --dark: #ff3333;
+  --darker: #cc2626;
+  --border-radius: 0.08rem;
 }
 
-* {
-    border-radius: border-box;
-}
+/* * {
+  box-sizing: border-box;
+} */
 
 body {
-    background-color: var(--primary);
-    margin: 0;
-    padding: 0;
-    font-family:Arial, Helvetica, sans-serif;
-    color: var(--dark);
-    line-height: 1.5;
-    font-size: 18px;
+  background-color: var(--primary);
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--dark);
+  line-height: 1.5;
+  font-size: 18px;
 }
 
+.my-search-form {
+    margin-top: 10px;
+    display: block;
+}
+
+.my-header-wrapper {
+  background-color: var(--dark);
+}
+
+
+.my-hero-container {
+  background-image: url("/images/HeroImage.jpeg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+  color: var(--primary);
+}
+
+.my-app-title {
+  font-size: 3rem;
+  background-color: var(--primary);
+  color: var(--darker);
+  padding: 10px 10px;
+  display: inline-block;
+  border-radius: var(--border-radius);
+  box-shadow: 6px 5px var(--darker);
+}
+
+.my-sub-head {
+  text-shadow: rgb(0, 0, 0) 1px 0 10px;
+  font-size: 1.25rem;
+  margin-inline-start: 5px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+
+/* 
 h1,
 h2,
 h4,
@@ -547,6 +590,4 @@ input {
     #subhead {
         display: none;
     }
-}
-
-
+}  */

@@ -13,9 +13,10 @@ router.get("/", withAuth, async (req, res) => {
     }).then((dbReviewData) => {
       const reviews = dbReviewData.map((review) => review.get({ plain: true }));
       res.render("all-posts-admin", {
-        layout: "dashboard",
         reviews,
       });
+      console.log(req.session.userId)
+      console.log(reviews)
     });
   } catch (err) {
     console.log(err);
@@ -25,9 +26,7 @@ router.get("/", withAuth, async (req, res) => {
 
 // GET route for new post when user is logged in
 router.get("/new", withAuth, (req, res) => {
-  res.render("new-post", {
-    layout: "dashboard",
-  });
+  res.render("new-post");
 });
 
 // GET route for editing a post when user is logged in
@@ -37,7 +36,6 @@ router.get("/edit/:id", withAuth, async (req, res) => {
       if (dbReviewData) {
         const review = dbReviewData.get({ plain: true });
         res.render("edit-post", {
-          layout: "dashboard",
           review,
         });
       } else {
@@ -46,7 +44,7 @@ router.get("/edit/:id", withAuth, async (req, res) => {
     });
   } catch (err) {
     console.log(err);
-    res.status(500).json(err);
+    res.status(500).render("error");
   }
 });
 
