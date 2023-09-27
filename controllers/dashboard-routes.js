@@ -15,8 +15,6 @@ router.get("/", withAuth, async (req, res) => {
       res.render("all-posts-admin", {
         reviews,
       });
-      console.log(req.session.userId)
-      console.log(reviews)
     });
   } catch (err) {
     console.log(err);
