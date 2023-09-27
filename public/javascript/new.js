@@ -6,13 +6,13 @@ console.log(starRatingEl);
 
 const starRating = new Starry(starRatingEl, {
 	name: starRatingId, // Use a name to determine tooltips for only this Starry element
-	labels: [
-		'Low',
-		'Nice to have',
-		'Very nice',
-		'Perfect',
-		'Excellent'
-	],
+	// labels: [
+	// 	'Low',
+	// 	'Nice to have',
+	// 	'Very nice',
+	// 	'Perfect',
+	// 	'Excellent'
+	// ],
 	onClear: function () {
 		$('[data-name="' + starRatingId + '"] [data-tooltip]').tooltip('close');
 	},
