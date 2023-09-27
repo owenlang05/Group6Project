@@ -1,0 +1,113 @@
+{
+  "status": true,
+  "message": "Success",
+  "timestamp": 1695785727222,
+  "data": {
+    "location": {
+      "location_id": "23147106",
+      "name": "Sunset Sushi & Grill",
+      "latitude": "-31.984846",
+      "longitude": "29.148508",
+      "num_reviews": "32",
+      "timezone": "Africa/Johannesburg",
+      "location_string": "Coffee Bay, Eastern Cape",
+      "awards": [],
+      "doubleclick_zone": "af.south_africa.eastern_cape",
+      "preferred_map_engine": "default",
+      "raw_ranking": "3.6332550048828125",
+      "ranking_geo": "Coffee Bay",
+      "ranking_geo_id": "1026423",
+      "ranking_position": "1",
+      "ranking_denominator": "7",
+      "ranking_category": "restaurant",
+      "ranking": "#1 of 9 places to eat in Coffee Bay",
+      "distance": null,
+      "distance_string": null,
+      "bearing": null,
+      "rating": "5.0",
+      "is_closed": false,
+      "is_long_closed": false,
+      "price_level": "$",
+      "price": "$30 - $200",
+      "description": "We are a Sushi & Grill restaurant with a view of the garden,and sounds of the sea. We are a family run business. Take a seat,relax and enjoy life.",
+      "web_url": "https://www.tripadvisor.com/Restaurant_Review-g1026423-d23147106-Reviews-Sunset_Sushi_Grill-Coffee_Bay_Eastern_Cape.html",
+      "write_review": "https://www.tripadvisor.com/UserReview-g1026423-d23147106-Sunset_Sushi_Grill-Coffee_Bay_Eastern_Cape.html",
+      "ancestors": [null],
+      "category": [null],
+      "subcategory": [null],
+      "parent_display_name": "Coffee Bay",
+      "is_jfy_enabled": false,
+      "nearest_metro_station": [],
+      "phone": "+27 84 287 5304",
+      "website": "http://www.facebook.com/sunsetsushigrill",
+      "email": "sunset.sg20@gmail.com",
+      "address_obj": [null],
+      "address": "Lot 18 Main Road, Coffee Bay 5082 South Africa",
+      "is_candidate_for_contact_info_suppression": false,
+      "cuisine": [null],
+      "dietary_restrictions": [],
+      "photo": [
+        {
+          "id": "480770685",
+          "published_date": "2021-02-18T09:15:07-0500",
+          "helpful_votes": "2",
+          "is_blessed": false,
+          "uploaded_date": "2021-02-18T09:15:07-0500",
+          "images": {
+            "small": {
+              "url": "https://media-cdn.tripadvisor.com/media/photo-l/1c/a7/fa/7d/photo0jpg.jpg",
+              "width": "150",
+              "height": "150"
+            },
+            "thumbnail": {
+              "url": "https://media-cdn.tripadvisor.com/media/photo-t/1c/a7/fa/7d/photo0jpg.jpg",
+              "width": "50",
+              "height": "50"
+            },
+            "original": {
+              "url": "https://media-cdn.tripadvisor.com/media/photo-o/1c/a7/fa/7d/photo0jpg.jpg",
+              "width": "1521",
+              "height": "659"
+            },
+            "large": {
+              "url": "https://media-cdn.tripadvisor.com/media/photo-s/1c/a7/fa/7d/photo0jpg.jpg",
+              "width": "550",
+              "height": "238"
+            },
+            "medium": {
+              "url": "https://media-cdn.tripadvisor.com/media/photo-f/1c/a7/fa/7d/photo0jpg.jpg",
+              "width": "250",
+              "height": "108"
+            }
+          }
+        }
+      ],
+      "tags": null,
+      "display_hours": null
+    },
+    "hours": {
+      "hoursTodayText": "",
+      "currentHoursText": "",
+      "addHoursLink": [null]
+    },
+    "ownerStatus": {
+      "isVerified": true,
+      "isMemberOwner": false,
+      "isUserInCountry": false
+    },
+    "ownerLikelihood": { "isOwner": false, "likelihood": "LOW" },
+    "overview": {
+      "name": "Sunset Sushi & Grill, South Africa",
+      "detailId": 23147106,
+      "geo": "Coffee Bay, South Africa",
+      "geoId": 1026423,
+      "isOwner": false,
+      "links": [null],
+      "location": [null],
+      "contact": [null],
+      "rating": [null],
+      "tags": [null],
+      "detailCard": [null]
+    }
+  }
+}
