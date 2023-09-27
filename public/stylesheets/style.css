@@ -121,6 +121,10 @@ input {
     color: var(--primary);
 }
 
+.header {
+    padding: 10px;
+}
+
 #username-input-signup {
     width: 90%;
 }
@@ -323,7 +327,7 @@ input {
 .searchbar {
     margin-top: 2rem;
     margin: 0 auto;
-    width: 50vw;
+    width: 75vw;
     display: block;
 }
 
@@ -537,6 +541,9 @@ input {
 }
 
 @media screen and (min-width: 1200px) {
+    .searchbar {
+        width: 90vw;
+    }
     .col-xl-1 {
         flex: 0 0 calc(100% * 1 / 12 - 2%);
     }
