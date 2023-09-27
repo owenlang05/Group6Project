@@ -24,6 +24,12 @@ const hbs = exphbs.create({ helpers });
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
+app.use(function(req,res,next){
+    res.locals.isLoggedIn = req.session.userId;
+    next();
+})
+
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, '/public')));
