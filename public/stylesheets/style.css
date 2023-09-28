@@ -116,15 +116,12 @@ input {
     padding: 10px;
 }
 
-.card-header h2 {
-    color: var(--primary);
-}
 
 .header {
     padding: 10px;
 }
 
-#username-input-signup {
+/* #username-input-signup {
     width: 90%;
 }
 
@@ -138,7 +135,7 @@ input {
 
 #password-input-login {
     width: 90%;
-}
+} */
 
 .hero {
     padding: 3% 4%;
@@ -190,43 +187,6 @@ input {
     text-decoration: none;
 }
 
-.card {
-    margin: 20px 20px 20px 30px;
-    border: 3px solid var(--darker);
-    border-radius: var(--border-radius);
-}
-
-.card-header {
-    color: var(--primary);
-    background-color: var(--darker);
-    padding: 1%;
-    border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
-}
-
-.card-body {
-    padding: 1%;
-    color: #000000;
-}
-
-.form-label,
-.form-input,
-.form-textarea {
-    display: block;
-}
-
-.form-label {
-    font-size: 1.1rem;
-    margin: 0 0 0 5px;
-}
-
-.form-input {
-    width: 95%;
-    padding: 1%;
-    margin: 5px 0;
-    font-size: 1.2rem;
-    border: 2px solid var(--dark);
-    border-radius: var(--border-radius);
-}
 
 .min-100-vw {
     min-width: 100vw;
@@ -290,10 +250,6 @@ input {
     display: block;
 }
 
-.searchbar .btn {
-    flex-grow: 1 0 0;
-    padding: 0, 0;
-}
 
 .col-auto {
     flex-grow: 1;

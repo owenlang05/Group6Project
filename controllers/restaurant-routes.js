@@ -6,10 +6,10 @@ router.get('/view/:id', async (req, res) => {
 
     const id = req.params.id;
 
-    const url = `https://tripadvisor16.p.rapidapi.com/api/v1/restaurant/getRestaurantDetails?restaurantsId=${id}`;
+    // const url = `https://tripadvisor16.p.rapidapi.com/api/v1/restaurant/getRestaurantDetails?restaurantsId=${id}`;
 
     // This can be used if API is exhausted for a singe restaurant 
-    // const url = "http://localhost:3001/data/location-detail.json";
+    const url = "http://localhost:3001/data/location-detail.json";
 
     const options = {
         method: 'GET',
