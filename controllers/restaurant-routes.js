@@ -1,16 +1,17 @@
 const router = require('express').Router();
 const fetch = require('node-fetch');
-const {Review, User} = require('../models')
+const {Review, User} = require('../models');
+const withAuth = require('../utils/auth');
 require('dotenv').config();
 
-router.get('/view/:id', async (req, res) => {
+router.get('/view/:id', withAuth, async (req, res) => {
 
     const id = req.params.id;
 
-    // const url = `https://tripadvisor16.p.rapidapi.com/api/v1/restaurant/getRestaurantDetails?restaurantsId=${id}`;
+    const url = `https://tripadvisor16.p.rapidapi.com/api/v1/restaurant/getRestaurantDetails?restaurantsId=${id}`;
 
     // This can be used if API is exhausted for a singe restaurant 
-    const url = "http://localhost:3001/data/location-detail.json";
+    // const url = "http://localhost:3001/data/location-detail.json";
 
     const options = {
         method: 'GET',
@@ -24,8 +25,8 @@ router.get('/view/:id', async (req, res) => {
         const response = await fetch(url, options);
         const result = await response.json();
         const restaurant = result.data.location;
-        const image = restaurant.photo[0].images.large;
-
+        // console.log(result.data)
+        const image = restaurant.photo.images.large;
         const reviewData = await Review.findAll({
             where: {
                 restaurant_id: id
@@ -39,8 +40,7 @@ router.get('/view/:id', async (req, res) => {
             ]  
         })
 
-        const reviews = reviewData.map((review) => review.get({plain: true}));
-        console.log(reviews)
+        const reviews = reviewData.map((review) => review.get({plain: true}))
         
         res.render('restaurant-detail', {restaurant, image, id, reviews})
     } catch (error) {        
@@ -51,7 +51,7 @@ router.get('/view/:id', async (req, res) => {
 
 })
 
-router.get('/:query', async (req, res) => {
+router.get('/:query', withAuth, async (req, res) => {
     const query = req.params.query;
 
     var url = `https://tripadvisor16.p.rapidapi.com/api/v1/restaurant/searchLocation?query=${query}`;
