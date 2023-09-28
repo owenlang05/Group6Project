@@ -1,29 +1,26 @@
-<div class="card">
-  <div class="card-header">
-    <h2>Sign Up</h2>
-  </div>
-
-  <form id="signup-form" class="card-body">
-    <div class="mb-3">
-      <label class="form-label" for="username-input-signup">Username</label>
-      <input class="form-control" type="text" id="username-input-signup" />
+<div class="container my-5">
+  <div class="card">
+    <div class="card-header">
+      <h2>Sign Up</h2>
     </div>
-    <div class="mb-3">
 
-      <label class="form-label" for="password-input-signup">Password</label>
-      <input class="form-control" type="password" id="password-input-signup" />
+    <form id="signup-form" class="card-body">
+      <div class="mb-3">
+        <label class="form-label" for="username-input-signup">Username</label>
+        <input class="form-control" type="text" id="username-input-signup" />
+      </div>
+      <div class="mb-3">
 
+        <label class="form-label" for="password-input-signup">Password</label>
+        <input class="form-control" type="password" id="password-input-signup" />
+
+      </div>
+      <button type="submit" id="signup-btn" class="btn btn-danger">Submit</button>
+    </form>
+    <div class="card-footer text-body-secondary">
+      <a href="/login">Login Instead</a>
     </div>
-    <button
-      type="submit"
-      id="signup-btn"
-      class="btn btn-danger"
-    >Submit</button>
-  </form>
-  <div class="card-footer text-body-secondary">
-    <a href="/login">Login Instead</a>
-  </div>
 
+  </div>
 </div>
-
 <script src="/javascript/signup.js"></script>

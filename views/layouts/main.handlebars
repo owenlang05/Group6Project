@@ -1,9 +1,8 @@
 <html lang="en">
 
-  <head>
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -24,96 +23,72 @@
       crossorigin="anonymous"
     ></script>
 
-  </head>
+</head>
 
-  <body>
+<body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand link-danger" href="/">DineHard</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="/">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/dashboard">My Reviews</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/help" id="help-link">Help</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/dashboard/new">Add New Review</a>
-            </li>
-            {{#if isLoggedIn}}
-              <li class="nav-item"><a
-                  class="nav-link"
-                  href="#"
-                  id="logout-link"
-                >Logout</a></li>
-            {{else}}
-              <li class="nav-item">
-                <a class="nav-link" href="/login">Login</a>
-              </li>
-            {{/if}}
-          </ul>
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              id="restaurantSearch"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button
-              class="btn btn-danger"
-              type="submit"
-               id="searchBtn"
-            >Search</button>
-          </form>
+        <div class="container-fluid">
+            <a class="navbar-brand link-danger" href="/">DineHard</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/dashboard">My Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/help" id="help-link">Help</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/dashboard/new">Add New Review</a>
+                    </li>
+                    {{#if isLoggedIn}}
+                    <li class="nav-item"><a class="nav-link" href="#" id="logout-link">Logout</a></li>
+                    {{else}}
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Login</a>
+                    </li>
+                    {{/if}}
+                </ul>
+
+            </div>
         </div>
-      </div>
     </nav>
     <div class="my-header-wrapper">
-      <div class="my-hero-container container px-1 py-1">
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-          <div class="col-10 col-sm-8 col-lg-6">
-          </div>
-          <div class="col-lg-6">
-            <h1 class="my-app-title display-5 fw-bold lh-1 mb-3">
-              Dine Hard
-            </h1>
-            <p class="my-sub-head">Eat out with confidence!!</p>
-          </div>
+        <div class="my-hero-container container px-1 py-1">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                <div class="col-10 col-sm-8 col-lg-6">
+                </div>
+                <div class="col-lg-6">
+                    <h1 class="my-app-title display-5 fw-bold lh-1 mb-3">
+                        Dine Hard
+                    </h1>
+                    <p class="my-sub-head">Eat out with confidence!!</p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 
     <main class="flex-row justify-center">
         <div class="searchbar">
-            <input type="text" id="restaurantSearch" placeholder="Search Restaurant">
-            <a type="button" class="btn" id="searchBtn">Search</a>
-            </input>
+                    <input class="form-control me-2" type="search" id="restaurantSearch" placeholder="Search"
+                        aria-label="Search" />
+                    <button class="btn btn-danger" style="width:100%" ="submit" id="searchBtn">Search</button>
         </div>
-    <div class="flex-row justify-center">
+        <div class="flex-row justify-center">
 
-        {{{body}}}
-      </div>
+            {{{body}}}
+        </div>
     </main>
     <footer>
-      DINE HARD ®
+        DINE HARD ®
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
     <script src="/javascript/search.js"></script>
     <script src="/javascript/logout.js"></script>
