@@ -12,7 +12,7 @@ router.get("/", withAuth, async (req, res) => {
       include: User,
     }).then((dbReviewData) => {
       const reviews = dbReviewData.map((review) => review.get({ plain: true }));
-      res.render("all-posts-admin", {
+      res.render("all-posts", {
         reviews,
       });
     });
@@ -33,6 +33,7 @@ router.get("/edit/:id", withAuth, async (req, res) => {
     await Review.findByPk(req.params.id).then((dbReviewData) => {
       if (dbReviewData) {
         const review = dbReviewData.get({ plain: true });
+        console.log(review)
         res.render("edit-post", {
           review,
         });

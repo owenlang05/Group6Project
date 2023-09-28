@@ -1,17 +1,15 @@
-<div class="post card">
-    <div class="card-header">
-        <h2>Edit Review</h2>
+<form>
+    <div class="my-3">
+        <label for="reviewBox" class="form-label">Update Review</label>
+        <textarea type="text" class="form-control" id="reviewBox" data-id="{{review.id}}"
+            aria-label="reviewTextBox"></textarea>
+        <label class="form-label" for="review-rating">Rating</label>
+        <div id="star-rating"></div>
     </div>
-    <form id="edit-review-form" class="card-body">
-        <input type="hidden" id="review-id" name="review-id" value="{{review.id}}" />
-        <label class="form-label" for="review-title">Title</label>
-        <input type="text" id="review-title" name="review-title" value="{{post.title}}" class="form-input" />
-        <label class="form-label" for="review-body">Content</label>
-        <textarea type="text" id="review-body" name="review-body" value="{{post.body}}"></textarea>
-        <button type="submit" class="btn">Update</button>
-        <button type="button" id="delete-btn" class="btn">Delete Review</button>
-    </form>
-</div>
+    <a type="button" id="edit-review-form" class="btn btn-danger my-1" style="display: block; margin: 0 auto; width: 60%;">Update Review</a>
+    <a type="button" id="delete-btn" class="btn btn-danger my-1"
+        style="display: block; margin: 0 auto; width: 60%;" data-id="{{review.id}}">Delete Review</a>
+</form>
 
 <script src="/javascript/edit.js"></script>
 <script src="/javascript/delete.js"></script>
