@@ -38,13 +38,12 @@ const newFormHandler = async (event) => {
     const reviewBox = document.querySelector('#reviewBox');
 	const body = reviewBox.value
     const token = localStorage.getItem("token");
-    const id = reviewBox.dataset.id;
-	console.log(body, id)
+    const restaurant_id = reviewBox.dataset.id;
     await fetch(`/api/review`, {
         method: 'POST',
         body: JSON.stringify({
             body,
-			id
+			restaurant_id
         }),
         headers: {
             "Content-Type": "application/json",
@@ -56,5 +55,5 @@ const newFormHandler = async (event) => {
 
 document    
     .querySelector("#new-review-form")
-    .addEventListener("submit", newFormHandler);
+    .addEventListener("click", newFormHandler);
 

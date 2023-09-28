@@ -29,18 +29,18 @@ router.get('/view/:id', async (req, res) => {
         const reviewData = await Review.findAll({
             where: {
                 restaurant_id: id
-            }
-        }, {
+            },
+        
             include: [
                 {
                     model: User,
                     attributes: ['username']
                 }
-            ]
+            ]  
         })
 
         const reviews = reviewData.map((review) => review.get({plain: true}));
-        console.log(image)
+        console.log(reviews)
         
         res.render('restaurant-detail', {restaurant, image, id, reviews})
     } catch (error) {        
