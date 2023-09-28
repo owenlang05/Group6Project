@@ -1,4 +1,4 @@
-<form>
+<div class="container-lg">
     <div class="my-3">
         <label for="reviewBox" class="form-label">Update Review</label>
         <textarea type="text" class="form-control" id="reviewBox" data-id="{{review.id}}"
@@ -6,10 +6,10 @@
         <label class="form-label" for="review-rating">Rating</label>
         <div id="star-rating"></div>
     </div>
-    <a type="button" id="edit-review-form" class="btn btn-danger my-1" style="display: block; margin: 0 auto; width: 60%;">Update Review</a>
+    <a type="button" id="edit-review-form" class="btn btn-danger my-1" style="display: block; margin: 0 auto; width: 50%;">Update Review</a>
     <a type="button" id="delete-btn" class="btn btn-danger my-1"
-        style="display: block; margin: 0 auto; width: 60%;" data-id="{{review.id}}">Delete Review</a>
-</form>
+        style="display: block; margin: 0 auto; width: 50%;" data-id="{{review.id}}">Delete Review</a>
+</div>
 
 <script src="/javascript/edit.js"></script>
 <script src="/javascript/delete.js"></script>
