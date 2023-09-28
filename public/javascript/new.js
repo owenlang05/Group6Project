@@ -35,15 +35,15 @@ const starRating = new Starry(starRatingEl, {
 
 const newFormHandler = async (event) => {
     event.preventDefault();
-    const title = document.querySelector('input[name="review-title"]').value;
-    const body = document.querySelector('textarea[name="review-body"]').value;
+    const reviewBox = document.querySelector('#reviewBox');
+	const body = reviewBox.value
     const token = localStorage.getItem("token");
-    
+    const id = reviewBox.dataset.id;
     await fetch(`/api/review`, {
         method: 'POST',
         body: JSON.stringify({
-            title,
-            body
+            body,
+			id
         }),
         headers: {
             "Content-Type": "application/json",

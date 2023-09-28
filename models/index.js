@@ -2,11 +2,11 @@ const User = require('./User');
 const Review = require('./Review');
 
 Review.belongsTo(User, {
-    foreignKey: 'userId',
+    foreignKey: 'user_id',
 });
 
 User.hasMany(Review, {
-    foreignKey: 'userId',
+    foreignKey: 'user_id',
     onDelete: 'CASCADE'
 } )
 
