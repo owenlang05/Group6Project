@@ -13,6 +13,10 @@ Review.init(
             type: DataTypes.TEXT,
             allowNull: false,
         },
+        rating: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
         userId: {
             type: DataTypes.INTEGER,
             references: {

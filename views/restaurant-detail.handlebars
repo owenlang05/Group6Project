@@ -26,14 +26,12 @@
   <section>
     <h2>Reviews</h2>
     {{#each reviews as | review |}}
-    <article class="card">
+    <article class="card my-3">
       <div class="card-header flex-row justify-space-between">
-        <h2>{{review.title}}</h2>
+        <h2>Written by {{review.User.username}} on {{format_date review.createdAt}}</h2>
+        <h2>Rated: {{review.rating}} stars!</h2>
       </div>
-      <div>
-        Written by {{review.User.username}} on {{format_date review.createdAt}}
-      </div>
-      <div>
+      <div class="card-body">
         {{review.body}}
       </div>
     </article>
@@ -44,6 +42,8 @@
     <div class="mb-3">
       <label for="reviewBox" class="form-label">Add your review here!</label>
       <textarea type="text" class="form-control" id="reviewBox" data-id="{{id}}" aria-label="reviewTextBox"></textarea>
+      <label class="form-label" for="review-rating">Rating</label>
+      <div id="star-rating"></div>
     </div>
     <button type="submit" id="new-review-form" class="btn btn-danger">Add Review!</button>
   </form>
