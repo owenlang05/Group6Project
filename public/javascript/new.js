@@ -5,13 +5,6 @@ console.log(starRatingEl);
 
 const starRating = new Starry(starRatingEl, {
 	name: starRatingId, // Use a name to determine tooltips for only this Starry element
-	// labels: [
-	// 	'Low',
-	// 	'Nice to have',
-	// 	'Very nice',
-	// 	'Perfect',
-	// 	'Excellent'
-	// ],
 	onClear: function () {
 		$('[data-name="' + starRatingId + '"] [data-tooltip]').tooltip('close');
 	},
@@ -27,6 +20,10 @@ const starRating = new Starry(starRatingEl, {
 		hover: '/images/icons/hover.svg',
 		active: '/images/icons/active.svg'
 	}
+});
+
+starRating.on('rate', function (rating) {
+	console.log('Rating: ' + rating)
 });
 
 const newFormHandler = async (event) => {
