@@ -140,46 +140,6 @@ input {
     width: 90%;
 }
 
-.btn {
-    font-size: 1.3rem;
-    text-decoration: none;
-    padding: 6px 5px;
-    width: 100%;
-    display: block;
-    margin: 5px 0;
-    border-radius: var(--border-radius);
-    color: var(--primary);
-    border: none;
-    outline: none;
-    background-color: var(--dark);
-    box-shadow: 3px 3px var(--darker);
-    transform: translate(-1px, -1px);
-}
-
-.btn:hover {
-    color: var(--dark);
-    background-color: var(--secondary);
-    transform: translate(0, 0);
-    box-shadow: 2px 2px var(--darker);
-}
-
-.navbar {
-    padding-bottom: -10%;
-    margin-bottom: 0;
-}
-
-.btn-inline {
-    display: inline;
-}
-
-.li-inline {
-    display: inline;
-}
-
-.nav-item {
-    margin: 0 40px;
-}
-
 .hero {
     padding: 3% 4%;
     background-image: url("/images/HeroImage.jpeg");
