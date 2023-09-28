@@ -25,8 +25,8 @@ router.get('/view/:id', async (req, res) => {
         const restaurant = result.data.location;
         const image = restaurant.photo[0].images.large;
         console.log(image)
-
-        res.render('restaurant-detail', {restaurant, image })
+        
+        res.render('restaurant-detail', {restaurant, image, id})
     } catch (error) {        
         console.error(error);
         res.status(500).render('error')
