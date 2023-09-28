@@ -37,16 +37,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="/dashboard">My Reviews</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/help" id="help-link">Help</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/dashboard/new">Add New Review</a>
                     </li>
                     {{#if isLoggedIn}}
                     <li class="nav-item"><a class="nav-link" href="#" id="logout-link">Logout</a></li>
@@ -69,7 +60,7 @@
                     <h1 class="my-app-title display-5 fw-bold lh-1 mb-3">
                         Dine Hard
                     </h1>
-                    <p class="my-sub-head">Eat out with confidence!!</p>
+                    <p class="my-sub-head"><b>Eat out with confidence!</b></p>
                 </div>
             </div>
         </div>
@@ -77,7 +68,7 @@
 
     <main class="flex-row justify-center">
         <div class="searchbar">
-                    <input class="form-control me-2" type="search" id="restaurantSearch" placeholder="Search"
+                    <input class="form-control me-2" type="search" id="restaurantSearch" placeholder="Search by city (example: Omaha)"
                         aria-label="Search" />
                     <button class="btn btn-danger" style="width:100%" ="submit" id="searchBtn">Search</button>
         </div>
