@@ -11,7 +11,7 @@ Review.init(
         },
         restaurant_id: {
             type: DataTypes.TEXT,
-            allowNull: false
+            allowNull: false,
         },
         user_id: {
             type: DataTypes.INTEGER,
