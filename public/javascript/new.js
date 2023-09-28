@@ -1,5 +1,4 @@
-// const Starry = require('starry-rating');
-const starRatingEl = document.querySelector("#star-rating");
+const starRatingEl = document.getElementById("star-rating");
 const starRatingId = 'ExampleRating';
 
 console.log(starRatingEl);
@@ -22,9 +21,6 @@ const starRating = new Starry(starRatingEl, {
 			placement: 'top'
 		});
 	},
-	onRate: function (rating) {
-		console.log(rating)
-	},
 	icons: {
 		// File path, uri or base64 string for `src` attribute
 		blank: '/images/icons/blank.svg',
@@ -35,15 +31,18 @@ const starRating = new Starry(starRatingEl, {
 
 const newFormHandler = async (event) => {
     event.preventDefault();
-    const title = document.querySelector('input[name="review-title"]').value;
-    const body = document.querySelector('textarea[name="review-body"]').value;
+    const reviewBox = document.querySelector('#reviewBox');
+	const body = reviewBox.value
     const token = localStorage.getItem("token");
-    
+    const restaurant_id = reviewBox.dataset.id;
+    const rating = starRating.getCurrentRating()
+
     await fetch(`/api/review`, {
         method: 'POST',
         body: JSON.stringify({
-            title,
-            body
+            body,
+			restaurant_id,
+            rating
         }),
         headers: {
             "Content-Type": "application/json",
@@ -55,5 +54,5 @@ const newFormHandler = async (event) => {
 
 document    
     .querySelector("#new-review-form")
-    .addEventListener("submit", newFormHandler);
+    .addEventListener("click", newFormHandler);
 

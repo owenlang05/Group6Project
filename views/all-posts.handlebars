@@ -1,17 +1,19 @@
-<div class ="posts flex-row justify-center">
-    {{#each reviews}}
-    <article class="card">
-        <div class="card-header flex-row justify-space-between">
-            <h2>
-                <a href="/review/{{id}}">{{title}}</a>
-            </h2>
-            <div>
-                Written by {{User.username}} on {{format_date createdAt}}
+<div class="container justify-content-left mt-5">
+    <section>
+        <h2>Your Reviews</h2>
+        {{#each reviews as | review |}}
+        <article class="card my-3">
+            <div class="card-header flex-row justify-space-between">
+                <h2 class="mx-2">Written by {{review.User.username}} on {{format_date review.createdAt}}</h2>
+                <h2>Rated: {{review.rating}} stars!</h2>
             </div>
-        </div>
-        <div class="card-body">
-            {{body}}
-        </div>
-    </article>
-    {{/each}}
+            <div class="card-body">
+                {{review.body}}
+                <a type="button" class="btn btn-danger my-1" id="gotoPostBtn" style="display: block; margin: 0 auto; width: 60%;" href="/restaurant/view/{{review.restaurant_id}}">Go To Restaurant Page</a>
+                <a type="button" class="btn btn-danger my-1" style="display: block; margin: 0 auto; width: 60%;" href="/dashboard/edit/{{review.id}}">Edit Post</a>
+            </div>
+
+        </article>
+        {{/each}}
+    </section>
 </div>

@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const fetch = require('node-fetch');
+const {Review, User} = require('../models')
 require('dotenv').config();
 
 router.get('/view/:id', async (req, res) => {
@@ -24,9 +25,24 @@ router.get('/view/:id', async (req, res) => {
         const result = await response.json();
         const restaurant = result.data.location;
         const image = restaurant.photo[0].images.large;
-        console.log(image)
+
+        const reviewData = await Review.findAll({
+            where: {
+                restaurant_id: id
+            },
         
-        res.render('restaurant-detail', {restaurant, image, id})
+            include: [
+                {
+                    model: User,
+                    attributes: ['username']
+                }
+            ]  
+        })
+
+        const reviews = reviewData.map((review) => review.get({plain: true}));
+        console.log(reviews)
+        
+        res.render('restaurant-detail', {restaurant, image, id, reviews})
     } catch (error) {        
         console.error(error);
         res.status(500).render('error')
