@@ -22,10 +22,6 @@ const starRating = new Starry(starRatingEl, {
 	}
 });
 
-starRating.on('rate', function (rating) {
-	console.log('Rating: ' + rating)
-});
-
 const newFormHandler = async (event) => {
     event.preventDefault();
     const reviewBox = document.querySelector('#reviewBox');
