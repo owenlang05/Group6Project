@@ -6,10 +6,10 @@ router.get('/view/:id', async (req, res) => {
 
     const id = req.params.id;
 
-    const url = `https://tripadvisor16.p.rapidapi.com/api/v1/restaurant/getRestaurantDetails?restaurantsId=${id}`;
+    // const url = `https://tripadvisor16.p.rapidapi.com/api/v1/restaurant/getRestaurantDetails?restaurantsId=${id}`;
 
     // This can be used if API is exhausted for a singe restaurant 
-    // const url = "http://localhost:3001/data/location-detail.json";
+    const url = "http://localhost:3001/data/location-detail.json";
 
     const options = {
         method: 'GET',
@@ -25,8 +25,8 @@ router.get('/view/:id', async (req, res) => {
         const restaurant = result.data.location;
         const image = restaurant.photo[0].images.large;
         console.log(image)
-
-        res.render('restaurant-detail', {restaurant, image })
+        
+        res.render('restaurant-detail', {restaurant, image, id})
     } catch (error) {        
         console.error(error);
         res.status(500).render('error')
