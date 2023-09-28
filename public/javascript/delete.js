@@ -1,6 +1,8 @@
 const deleteReviewHandler = async (event) => {
     event.preventDefault();
-    const reviewId = document.querySelector('input[name="review-id"]').value;
+    const deleteBtnEl = document.getElementById('delete-btn');
+    const reviewId = deleteBtnEl.dataset.id;
+    console.log(reviewId)
     await fetch(`/api/review/${reviewId}`, {
         method: 'DELETE'
     })

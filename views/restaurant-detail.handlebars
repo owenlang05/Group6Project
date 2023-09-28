@@ -21,17 +21,32 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container justify-content-left">
 
   <section>
     <h2>Reviews</h2>
+    {{#each reviews as | review |}}
+    <article class="card my-3">
+      <div class="card-header flex-row justify-space-between">
+        <h2 class="mx-2">Written by {{review.User.username}} on {{format_date review.createdAt}}</h2>
+        <h2>Rated: {{review.rating}} stars!</h2>
+      </div>
+      <div class="card-body">
+        {{review.body}}
+      </div>
+    </article>
+    {{/each}}
   </section>
 
   <form>
     <div class="mb-3">
       <label for="reviewBox" class="form-label">Add your review here!</label>
-      <textarea type="text" class="form-control" id="reviewBox" aria-describedby="reviewTextBox"></textarea>
+      <textarea type="text" class="form-control" id="reviewBox" data-id="{{id}}" aria-label="reviewTextBox"></textarea>
+      <label class="form-label" for="review-rating">Rating</label>
+      <div id="star-rating"></div>
     </div>
-    <button type="submit" class="btn btn-danger">Add Review!</button>
+    <button type="submit" id="new-review-form" class="btn btn-danger">Add Review!</button>
   </form>
 </div>
+
+<script src="/javascript/new.js"></script>
