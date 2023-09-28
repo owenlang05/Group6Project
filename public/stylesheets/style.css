@@ -49,14 +49,14 @@ body {
 }
 
 .my-sub-head {
-  text-shadow: rgb(0, 0, 0) 1px 0 10px;
   font-size: 1.25rem;
   margin-inline-start: 5px;
   color: var(--primary);
+  text-shadow: rgb(0, 0, 0) 1px 0 10px;
 }
 
 footer {
-  position: fixed;
+  position: inherit;
   bottom: 0;
   width: 100%;
   text-align: center;
