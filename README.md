@@ -12,10 +12,10 @@ Users can expect the following app functionality:
 
 * When they initially visit the site, they are presented with a homepage that displays a search bar for searching restaurants by location.
 * After searching for restaurant by city, they are presented with restaurant options from that city.
-* If they click on any of the restaurants, they are taken to that restaurant's page where they can learn more about the location and see any associated reviews.
-* If they would like to publish a review, they can click on "login" in the navigation, where they can either sign up as a new user or log in if they are an existing user.
-* When they log in or sign up, they are taken to a dashboard page where they can see their reviews.
-* From the dashboard page they click on any of their existing reviews and either edit them or delete them.
+* If they click on any of the restaurants, they are taken to a login page where they can log in or sign up as a new user. 
+* After loggin in or signing up they are taken to that restaurant's page where they can learn more about the location and see any associated reviews or post their own review.
+* If they publish a review, they are taken to a dashboard page where they can see their reviews.
+* From the dashboard page they click on any of their existing reviews and either edit them or delete them or return to the restaurant page.
 * Finally, the user can log out from the navigation.
 
 ## Screenshot

@@ -75,7 +75,6 @@ router.get('/:query', withAuth, async (req, res) => {
             const result_2 = await response_2.json();
 
             const restaurants = result_2.data.data.map((data) => {return(data)});
-            // console.log(restaurants[0])
 
             res.render('restaurants', {restaurants })
         }

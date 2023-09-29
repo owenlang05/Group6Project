@@ -121,22 +121,6 @@ input {
     padding: 10px;
 }
 
-/* #username-input-signup {
-    width: 90%;
-}
-
-#password-input-signup {
-    width: 90%;
-}
-
-#username-input-login {
-    width: 90%;
-}
-
-#password-input-login {
-    width: 90%;
-} */
-
 .hero {
     padding: 3% 4%;
     background-image: url("/images/HeroImage.jpeg");
