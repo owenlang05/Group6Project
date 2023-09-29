@@ -28,9 +28,9 @@ npm i starry-rating
 Users can expect the following app functionality:
 
 * When they initially visit the site, they are presented with a homepage that displays a search bar for searching restaurants by location.
+* They are prompted to login or sign up before searching for restaurants.
 * After searching for restaurant by city, they are presented with restaurant options from that city.
-* If they click on any of the restaurants, they are taken to that restaurant's page where they can learn more about the location and see any associated reviews.
-* If they would like to publish a review, they are prompted to "login" in the navigation, where they can either sign up as a new user or log in if they are an existing user.
+* If they click on any of the restaurants, they are taken to that restaurant's page where they can learn more about the location and see or publish any reviews of that restaurant.
 * When they log in or sign up, they are taken to a dashboard page where they can see all of the reviews they have written.
 * From the dashboard page they click on any of their existing reviews and either update them or delete them.
 * Finally, the user can log out from the navigation.
